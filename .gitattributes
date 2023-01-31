@@ -1,2 +1,3 @@
+# https://github.com/github/linguist/issues/3666
 *.sql linguist-detectable=true
 *.sql linguist-language=sql
