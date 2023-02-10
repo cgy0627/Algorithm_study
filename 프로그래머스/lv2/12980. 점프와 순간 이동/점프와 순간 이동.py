@@ -1,11 +1,9 @@
 def solution(n):
-    k = 1
-    
-    while n != 1:
-        if n % 2 == 0:  # 짝수일 때
+    ans = 0
+    while n:
+        if n % 2 == 0:
             n /= 2
-        else:           # 홀수일 때
+        else:
             n -= 1
-            k += 1
-    
-    return k
+            ans += 1
+    return ans
