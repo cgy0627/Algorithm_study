@@ -1,0 +1,8 @@
+import sys
+
+lst = []
+for i in range(int(sys.stdin.readline())):
+    lst.append(list(map(int, sys.stdin.readline().split())))
+
+for a,b in sorted(lst, key=lambda x: (x[0], x[1])):
+    print(a, b)
