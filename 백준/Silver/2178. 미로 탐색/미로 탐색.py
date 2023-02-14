@@ -13,22 +13,18 @@ def bfs(a, b):
             ans.append(idx)
             continue
         
-        if x+1 < M:
-            if maze[x+1][y] == '1':
-                dq.append((idx+1, x+1, y))
-                maze[x+1][y] = '0'
-        if y+1 < N:
-            if maze[x][y+1] == '1':
-                dq.append((idx+1, x, y+1))
-                maze[x][y+1] = '0'
-        if x-1 >= 0:
-            if maze[x-1][y] == '1':
-                dq.append((idx+1, x-1, y))
-                maze[x-1][y] = '0'
-        if y-1 >= 0:
-            if maze[x][y-1] == '1':
-                dq.append((idx+1, x, y-1))
-                maze[x][y-1] = '0'
+        if x+1 < M and maze[x+1][y] == '1':
+            dq.append((idx+1, x+1, y))
+            maze[x+1][y] = '0'
+        if y+1 < N and maze[x][y+1] == '1':
+            dq.append((idx+1, x, y+1))
+            maze[x][y+1] = '0'
+        if x-1 >= 0 and maze[x-1][y] == '1':
+            dq.append((idx+1, x-1, y))
+            maze[x-1][y] = '0'
+        if y-1 >= 0 and maze[x][y-1] == '1':
+            dq.append((idx+1, x, y-1))
+            maze[x][y-1] = '0'
     return ans
 
 maze = []
